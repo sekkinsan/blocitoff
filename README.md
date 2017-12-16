@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -22,3 +23,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+=======
+# blocitoff
+Blocitoff project
+>>>>>>> c22c8e8d50ab2d4d107eaf2ac5ea23fd413034d5
