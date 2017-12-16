@@ -20,6 +20,11 @@ group :development do
   gem 'sqlite3'
 end
 
+group :Development, :test do
+  gem 'rspec-rails', '~> 3.0'
+  gem 'rails-controller-testing'
+end
+
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -35,6 +40,9 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
 gem 'thor', '0.19.1'
+
+#devise
+gem 'devise'
 
 group :development do
   gem 'listen', '~> 3.0.5'
