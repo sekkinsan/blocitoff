@@ -43,6 +43,8 @@ gem 'thor', '0.19.1'
 
 #devise
 gem 'devise'
+#faker
+gem 'faker'
 
 group :development do
   gem 'listen', '~> 3.0.5'

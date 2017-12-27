@@ -2,12 +2,12 @@ class UsersController < ApplicationController
 
 
   def show
-    if !current_user.nil?
+    if current_user.present?
       @user = current_user
       @item = Item.new
       @items = @user.items
     else
-      redirect_to new_user_registration_path
+      redirect_to welcome_index
     end  
   end
 
