@@ -1,13 +1,13 @@
-<body>
-    <div class="container">
-      <div class="user-info pull-right">
-        <% if user_signed_in? %>
-          <li>Email: <strong><%= current_user.email %></strong> </li>
-          <li>To do TASKS: ADD LINK TO TASKS</li>
-          <li>Completed tasks: ADD LINK TO COMPLETED TASKS</li>
-        <% end %>
-      </div>
-     </ul>
-    <%= yield %>
+<h2> Your to-do list</h2>
+
+
+  <div class="col-md-8">
+    <div class='items'>
+      <%= render partial: "items/item", local: { item: @item} %>
     </div>
-</body>
+  </div>
+  <div class="col-md-8">
+    <div class='new-item'>
+      <%= render partial: "items/form", local: { item: @item } %>
+    </div>
+  </div>
