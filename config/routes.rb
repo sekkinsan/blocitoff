@@ -3,12 +3,10 @@ Rails.application.routes.draw do
 
   get 'welcome/about'
 
-  get 'items/create'
-
   root 'users#show'
 
   resources :users do
-    resources :items, only: [:new, :create]
+    resources :items, only: [:new, :create, :index]
   end
 
 

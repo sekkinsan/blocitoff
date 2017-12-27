@@ -11,7 +11,7 @@ class ItemsController < ApplicationController
 
         if @item.save
             flash[:notice] = "Item saved"
-            redirect_to @item
+            redirect_to current_user
         else
             flash.now[:alert] = "Item was not created, please try again."
             render :new
