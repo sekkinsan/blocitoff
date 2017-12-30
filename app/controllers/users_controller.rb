@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
 
+before_action :authenticate_user!
 
   def show
     if current_user.present?
@@ -7,7 +8,7 @@ class UsersController < ApplicationController
       @item = Item.new
       @items = @user.items
     else
-      redirect_to welcome_index
+      redirect_to new_user_registration_path
     end  
   end
 
