@@ -23,7 +23,15 @@ class ItemsController < ApplicationController
     end
 
     def destroy
+        @item = Item.find(params[:id])
 
+        if @item.destroy
+            flash[:notice] = "Item completed"
+            redirect_to root_path
+        else
+            flash[:error] = "There was an error deleting the item, please try again."
+            render :show
+        end
     end
 
 end

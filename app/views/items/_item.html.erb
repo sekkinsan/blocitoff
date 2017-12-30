@@ -6,6 +6,7 @@
       </h4>
       <small>
         submitted <%= time_ago_in_words(item.created_at) %> ago <br>
+        <%= link_to "Complete!", item, method: :delete, class: 'glyphicon glyphicon-ok' %>
       </small>
     </div>
   </div>

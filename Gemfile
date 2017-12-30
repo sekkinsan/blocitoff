@@ -45,6 +45,8 @@ gem 'thor', '0.19.1'
 gem 'devise'
 #faker
 gem 'faker'
+#bootstrap
+gem 'bootstrap-sass'
 
 group :development do
   gem 'listen', '~> 3.0.5'
