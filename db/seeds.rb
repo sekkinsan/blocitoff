@@ -13,7 +13,7 @@ include Faker
 5.times do
   user = User.create!(
     email: Faker::Internet.email,
-    password: Faker::Internet.password
+    password: 'password'
   )
 end
 users = User.all
@@ -24,6 +24,11 @@ users = User.all
     name: Faker::Lorem.sentence
   )
 end
+
+user = User.create!(
+  email: "jacob.yun429@gmail.com",
+  password: "password"
+)
 
 puts "Seed finished"
 puts "#{User.count} users created."
