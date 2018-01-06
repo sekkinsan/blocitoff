@@ -5,8 +5,9 @@
         <%= item.name %>
       </h4>
       <small>
-        submitted <%= time_ago_in_words(item.created_at) %> ago <br>
+        created <%= time_ago_in_words(item.created_at) %> ago <br>
         <%= link_to "Complete!", item, method: :delete, class: 'glyphicon glyphicon-ok' %>
+        <%= distance_of_time_in_words(Time.now, item.created_at.to_date + 7 ) %> remaining <br>
       </small>
     </div>
   </div>
